@@ -6,6 +6,18 @@ from scripts.tool import cwd,is_win
 bin_file_name = "BaiduPCS-Go.exe" if is_win else "BaiduPCS-Go"
 bin_file_path = os.path.join(cwd, bin_file_name)
 
+import hashlib
+
+class IncorrectHashException(Exception):
+    pass
+
+def check_hash(filename, expected):
+    with open(filename, "rb") as f:
+        actual = hashlib.file_digest(f, "sha256").hexdigest().lower()
+    if expected.lower() != actual:
+        raise IncorrectHashException("Incorrect hash for download!\n" +
+            f"Expected: {expected}\n" +
+            f"Actual:   {actual}")
 
 def check_bin_exists():
     return os.path.exists(bin_file_path)
