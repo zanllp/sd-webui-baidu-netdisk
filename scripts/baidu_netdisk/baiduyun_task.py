@@ -6,10 +6,10 @@ import uuid
 import re
 import subprocess
 
-from scripts.log_parser import parse_log_line
-from scripts.bin import bin_file_path
-from scripts.logger import logger
-from scripts.tool import is_dev
+from scripts.baidu_netdisk.log_parser import parse_log_line
+from scripts.baidu_netdisk.bin import bin_file_path
+from scripts.baidu_netdisk.logger import logger
+from scripts.baidu_netdisk.tool import is_dev
 
 
 class BaiduyunTask:

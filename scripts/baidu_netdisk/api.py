@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import os
 import shutil
 import time
-from scripts.tool import human_readable_size, is_valid_image_path, temp_path
+from scripts.baidu_netdisk.tool import human_readable_size, is_valid_image_path, temp_path
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 import re
@@ -10,7 +10,7 @@ import subprocess
 import asyncio
 import subprocess
 from typing import Any, List, Literal, Optional, Union
-from scripts.baiduyun_task import BaiduyunTask
+from scripts.baidu_netdisk.baiduyun_task import BaiduyunTask
 from pydantic import BaseModel
 from fastapi.responses import FileResponse, RedirectResponse
 from PIL import Image
@@ -18,22 +18,22 @@ from io import BytesIO
 import hashlib
 from urllib.parse import urlencode
 
-from scripts.bin import (
+from scripts.baidu_netdisk.bin import (
     bin_file_name,
     get_matched_summary,
     check_bin_exists,
     download_bin_file,
 )
 
-from scripts.bin import (
+from scripts.baidu_netdisk.bin import (
     check_bin_exists,
     cwd,
     bin_file_path,
     is_win,
 )
-from scripts.tool import get_windows_drives, convert_to_bytes
+from scripts.baidu_netdisk.tool import get_windows_drives, convert_to_bytes
 import functools
-from scripts.logger import logger
+from scripts.baidu_netdisk.logger import logger
 
 class AutoUpload:
     # 已成等待发送图像的队列

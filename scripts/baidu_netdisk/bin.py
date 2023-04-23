@@ -2,7 +2,7 @@ import urllib.request
 import zipfile
 import os
 import platform
-from scripts.tool import cwd,is_win
+from scripts.baidu_netdisk.tool import cwd,is_win
 bin_file_name = "BaiduPCS-Go.exe" if is_win else "BaiduPCS-Go"
 bin_file_path = os.path.join(cwd, bin_file_name)
 

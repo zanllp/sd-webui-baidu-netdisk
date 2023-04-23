@@ -1,6 +1,5 @@
-from scripts.api import baidu_netdisk_api, send_img_path, AutoUpload
+from scripts.baidu_netdisk.api import baidu_netdisk_api, send_img_path, AutoUpload
 from modules import script_callbacks, generation_parameters_copypaste as send, extras
-from scripts.tool import locale
 from PIL import Image
 
 
@@ -49,7 +48,7 @@ def on_ui_tabs():
                 )
             )
 
-        return ((view, "无边图像浏览" if locale == "zh" else "Infinite image browsing", "infinite-image-browsing"),)
+        return ((view, "百度云", "baidu_netdisk"),)
 
 
 

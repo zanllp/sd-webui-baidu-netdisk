@@ -89,7 +89,7 @@ def is_valid_image_path(path):
 
 
 is_dev = "APP_ENV" in os.environ and os.environ["APP_ENV"] == "dev"
-cwd = os.path.normpath(os.path.join(__file__, "../../"))
+cwd = os.path.normpath(os.path.join(__file__, "../../../"))
 is_win = platform.system().lower().find("windows") != -1
 
 

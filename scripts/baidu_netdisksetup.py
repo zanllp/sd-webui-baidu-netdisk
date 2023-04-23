@@ -1,0 +1,1 @@
+import scripts.baidu_netdisk.setup
